@@ -83,6 +83,14 @@ void sort(int *numbers, int currentSize, int type)
 			selectSort(numbers, currentSize);
 			break;
 		}
+		case QUICK_SORT: {
+			quickSort(numbers, 0, currentSize - 1);
+			break;
+		}
+		case MERGE_SORT: {
+			mergeSort(numbers, 0, currentSize - 1);
+			break;
+		}
 		default: {
 			//nothing to do
 		}

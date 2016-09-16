@@ -14,7 +14,7 @@ void insertHalfSort(int *numbers, int size)
 			}
 		}
 		int temp = numbers[i];
-		for (key = i; key > right;--key) {
+		for (key = i; key > right; --key) {
 			numbers[key] = numbers[key - 1];
 		}
 		numbers[right] = temp;
