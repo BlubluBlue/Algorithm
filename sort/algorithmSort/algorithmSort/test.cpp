@@ -22,13 +22,14 @@ enum {
 int main()
 {
 	int *numbers = new int[MAX_SIZE];
-	int currentSize = getNumbers(numbers, MAX_SIZE);
-	int type = getType();
-	
-	sort(numbers, currentSize, type);
+	while (1) {
+		int currentSize = getNumbers(numbers, MAX_SIZE);
+		int type = getType();
 
-	getResult(numbers, currentSize);
+		sort(numbers, currentSize, type);
 
+		getResult(numbers, currentSize);
+	}
 	delete[] numbers;
 	return 0;
 }
@@ -72,6 +73,14 @@ void sort(int *numbers, int currentSize, int type)
 		}
 		case INSERT_SORT: {
 			insertSort(numbers, currentSize);
+			break;
+		}
+		case INSERT_HALF_SORT: {
+			insertHalfSort(numbers, currentSize);
+			break;
+		}
+		case SELECT_SORT: {
+			selectSort(numbers, currentSize);
 			break;
 		}
 		default: {
