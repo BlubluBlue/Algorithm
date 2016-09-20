@@ -9,4 +9,5 @@ void insertHalfSort(int *numbers, int size);
 void selectSort(int *numbers, int size);
 void quickSort(int *numbers, int left, int right);
 void mergeSort(int *numbers, int left, int right);
+void shellSort(int *numbers, int size);
 #endif

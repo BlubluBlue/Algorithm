@@ -79,6 +79,10 @@ void sort(int *numbers, int currentSize, int type)
 			insertHalfSort(numbers, currentSize);
 			break;
 		}
+		case SHELL_SORT: {
+			shellSort(numbers, currentSize);
+			break;
+		}
 		case SELECT_SORT: {
 			selectSort(numbers, currentSize);
 			break;
